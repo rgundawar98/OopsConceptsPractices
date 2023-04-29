@@ -8,7 +8,7 @@ namespace OopsConcepts
         {
             Console.WriteLine("Welcome to the Oops Concepts");
             Console.WriteLine("Choose the option from below");
-            Console.WriteLine("1.Class And object\n2.Inheritance\n3.Overloading\n4.Overriding");
+            Console.WriteLine("1.Class And object\n2.Inheritance\n3.Overloading\n4.Overriding\n5.Encapsulation");
             int option = Convert.ToInt32(Console.ReadLine());
             switch(option)
             {
@@ -42,6 +42,13 @@ namespace OopsConcepts
                     //child class can access both methods of parent and child class
                     vechicle.Bike();
                     vechicle.Type_Bike();
+                    break;
+                case 5:
+                    Encapsulation encapsulation = new Encapsulation();
+                    encapsulation.Name = "Neha Singh";
+                    encapsulation.Id = 146;
+                    Console.WriteLine("Name:"+ encapsulation.Name);
+                    Console.WriteLine("Id:"+encapsulation.Id);
                     break;
             }
         }
