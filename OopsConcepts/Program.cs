@@ -8,7 +8,8 @@ namespace OopsConcepts
         {
             Console.WriteLine("Welcome to the Oops Concepts");
             Console.WriteLine("Choose the option from below");
-            Console.WriteLine("1.Class And object\n2.Inheritance\n3.Overloading\n4.Overriding\n5.Encapsulation\n6.Abstraction");
+            Console.WriteLine("1.Class And object\n2.Inheritance\n3.Overloading\n4.Overriding\n5.Encapsulation\n6.Abstraction" +
+                "\n7.Types Of Variables");
             int option = Convert.ToInt32(Console.ReadLine());
             switch(option)
             {
@@ -53,6 +54,12 @@ namespace OopsConcepts
                 case 6:
                     Square square = new Square(6);
                     Console.WriteLine("Area="+square.Test_Area());
+                    break;
+                case 7:
+                    TypesOfVariables typesOfVariables = new TypesOfVariables();
+                    typesOfVariables.Test();
+                    TypesOfVariables.Demo(); //Static Method does not have need to call with refernce object
+                    Console.WriteLine("Instance variable:"+typesOfVariables.Id);//Instance variables
                     break;
             }
         }
