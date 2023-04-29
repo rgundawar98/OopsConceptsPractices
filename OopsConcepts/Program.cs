@@ -9,7 +9,7 @@ namespace OopsConcepts
             Console.WriteLine("Welcome to the Oops Concepts");
             Console.WriteLine("Choose the option from below");
             Console.WriteLine("1.Class And object\n2.Inheritance\n3.Overloading\n4.Overriding\n5.Encapsulation\n6.Abstraction" +
-                "\n7.Types Of Variables\n8.Types Of Methods");
+                "\n7.Types Of Variables\n8.Types Of Methods\n9.Value Type\n10.Reference Type");
             int option = Convert.ToInt32(Console.ReadLine());
             switch(option)
             {
@@ -65,6 +65,15 @@ namespace OopsConcepts
                     TypesOfMethods typesOfMethods = new TypesOfMethods();
                     typesOfMethods.Demo1(); //Non-Static Method
                     TypesOfMethods.Demo();//Static Method
+                    break;
+                case 9:
+                    ValueType valueType = new ValueType();
+                    valueType.Value_Type_Test();
+                    break;
+                case 10:
+                    ReferenceType referenceType = new ReferenceType();
+                    int value = 12;
+                    referenceType.Test(value);
                     break;
             }
         }
