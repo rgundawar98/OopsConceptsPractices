@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OopsConcepts.TypesOfInheritance;
+using System;
 
 namespace OopsConcepts
 {
@@ -9,7 +10,8 @@ namespace OopsConcepts
             Console.WriteLine("Welcome to the Oops Concepts");
             Console.WriteLine("Choose the option from below");
             Console.WriteLine("1.Class And object\n2.Inheritance\n3.Overloading\n4.Overriding\n5.Encapsulation\n6.Abstraction" +
-                "\n7.Types Of Variables\n8.Types Of Methods\n9.Value Type\n10.Reference Type");
+                "\n7.Types Of Variables\n8.Types Of Methods\n9.Value Type\n10.Reference Type\n11.Single Inheritance\n12.Multilevel" +
+                "Inheritance\n13.Hierarchical Inheritance");
             int option = Convert.ToInt32(Console.ReadLine());
             switch(option)
             {
@@ -74,6 +76,37 @@ namespace OopsConcepts
                     ReferenceType referenceType = new ReferenceType();
                     int value = 12;
                     referenceType.Test(value);
+                    break;
+                case 11:
+                    Console.WriteLine("Single Inheritance");
+                    Elephant elephant = new Elephant(); //Parent Class
+                    elephant.Place();
+                    Tiger tiger = new Tiger(); //Child Class
+                    tiger.Eat(); //Child class method
+                    tiger.Place(); //Parent class method
+                    break;
+                case 12:
+                    Console.WriteLine("MultiLevel Inheritance");
+                    BMW bMW = new BMW();
+                    bMW.Color(); //Parent class method
+                    Mercedez mercedez= new Mercedez();
+                    mercedez.Gear_System();
+                    mercedez.Color(); //Parent method or inherited class method
+                    Ferrari ferrari = new Ferrari();
+                    ferrari.Car_Type();
+                    ferrari.Gear_System();//Inherited class method
+                    ferrari.Color(); //Inherited class's inherited method
+                    break;
+                case 13:
+                    Console.WriteLine("Hierarchical Inheritance");
+                    Fruit fruit = new Fruit();
+                    fruit.Test(); //Parent class method
+                    Banana banana = new Banana();
+                    banana.Taste(); //Child class method
+                    banana.Test();//Inherited class method
+                    Pineapple pineapple = new Pineapple();
+                    pineapple.Fruit_Type(); //Own class method
+                    pineapple.Test();//Inherited class method
                     break;
             }
         }
